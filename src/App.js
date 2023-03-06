@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import "./App.css";
 import Axios from "axios";
+import { Footer } from "./Footer";
 
 function App() {
   const [fact, setFact] = useState("");
@@ -17,8 +18,11 @@ function App() {
 
   return (
     <div className="App">
-      <button onClick={fetchCatFact}>Generate Cat Fact</button>
-      <p>{fact}</p>
+      <div>
+        <button onClick={fetchCatFact}>Generate Cat Fact</button>
+        <p>{fact}</p>
+      </div>
+      <Footer />
     </div>
   );
 }
